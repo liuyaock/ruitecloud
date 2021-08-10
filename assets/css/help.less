@@ -13,52 +13,86 @@
 }
 
 /* problem */
-.problem{
-    margin-bottom: 3em;
+.problem {
+    margin-bottom: 6em;
 
-    .title{
+    .title {
         font-size: 1.2em;
         margin-top: 1em;
         margin-bottom: 1em;
     }
 
-    .item{
-        .list{
+    .item {
+        .list {
             height: 3em;
             line-height: 3em;
-            border-bottom: 2px solid #cccccc;
 
-            span{
-                &:first-child{
+            .open {
+                position: relative;
+                border-bottom: 2px solid #cccccc;
+                transition: all linear .3s;
+
+                .top {
+                    z-index: 100;
+                    line-height: 3em;
                     color: #666666;
                     cursor: pointer;
                     text-decoration: underline;
                 }
-            }
 
-            .glyphicon-plus{
-                float: right;
-                color: #666666;
-                padding: .8em;
+                .bottom {
+                    display: block;
+                    width: 100%;
+                    background-color: #ff6800;
+                    position: absolute;
+                    top: 0;
+                    user-select: none;
+                    opacity: 0;
+                    z-index: -100;
+                    transition: all linear 2s;
+                }
+
+                .glyphicon-plus {
+                    float: right;
+                    color: #666666;
+                }
+
+                input {
+                    display: none;
+                }
+
+                input:checked~.bottom {
+                    opacity: 1;
+                    z-index: 1000;
+                    transform: translateY(3em);
+                }
+
+                label {
+                    text-align: center;
+                    line-height: 2em;
+                    display: inline-block;
+                    width: 2em;
+                    height: 2em;
+                    cursor: pointer;
+                }
             }
         }
     }
 
     @media screen and (max-width:480px) {
-        &{
-            .item{
-                .list{
+        & {
+            .item {
+                .list {
                     width: auto;
                     white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-                            
-                    span{
-                        &:first-child{
-                            
-                        }
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    span {
+                        &:first-child {}
                     }
-                    .glyphicon-plus{
+
+                    .glyphicon-plus {
                         float: none;
                         color: #666666;
                         padding: 0;
