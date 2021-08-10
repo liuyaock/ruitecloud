@@ -1,0 +1,230 @@
+/* 头部 */ 
+.header{
+    background-color: transparent;
+    position: sticky;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100000;
+
+    transition:all linear .4s;
+    
+    .navbar{
+        border:0px;
+        border-radius: 0px;
+        margin: 0;
+        background-color: #fff;
+
+        .navbar-header{
+            .navbar-toggle{
+                background-color: #fff;
+
+                .icon-bar{
+                    color: #000;
+                    background-color: #000;
+                }
+
+                &:hover{
+                    background-color: #ff6800;
+                }
+            }
+            .navbar-brand{
+                padding: 0;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+        }
+    }
+
+    .collapse{
+        border-color: #ff6800;
+
+        .nav{
+            a{
+                color:#000;
+                text-transform: uppercase;
+                border-bottom:2px solid transparent;
+                transition:all linear .3s;
+
+                &:hover{
+                    color: #ff6800;
+                    border-bottom:2px solid #ff6800;
+                }
+            }
+        }
+    }
+
+        
+    }
+
+    @media screen and (max-width:768px){
+        &{
+            background-color:#fff;
+            .navbar{
+                .nav{
+                    a{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (max-width:480px) {
+        &{
+            .navber-inverses{
+                .navbar-header{
+                    a{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 尾部 */
+.footer{
+    background-color: #eeeeee;
+
+    .top{
+        margin: 2em 0;
+        display: flex;
+        justify-content: space-between;
+
+        .left{
+            width: 75%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .list{
+                width: 12%;
+                margin-right: 5%;
+
+                span{
+                    display: block;
+                    color: #666666;
+
+                    &:first-child{
+                        color: #000;
+                        font-size: 1.3em;
+                        margin-bottom: .5em;
+                    }
+                }
+            }
+        }
+
+        .right{
+            width: 25%;
+            padding: 2em 0em 2em 4em;
+
+            .phone{
+                width: 80%;
+                border: 1px solid #ff6800;
+                border-radius: 5px;
+
+                .first,.second{
+                    font-size: 1.3em;
+                    color: #666666;
+                }
+                .glyphicon{
+                    color: #ff6800;
+                    padding: .5em;
+                }
+            } 
+        }
+    }
+
+    .bottom{
+        .info{
+            color: #666666;
+
+            span{
+                margin-right: .5em;
+
+                &:first-child{
+                    color: #ff6800;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width:1200px) {
+        &{
+            .top{
+                .left{
+                    .list{
+                        width: 15%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:990px) {
+        &{
+            .top{
+                .left{
+                    width: 70%;
+                    
+                    .list{
+                        width: 20%;
+
+                        span{
+                            font-size: .5em;
+
+                            &:first-child{
+                                font-size: 1em;
+                            }
+                        }
+                    }
+                }
+
+                .right{
+                    width: 40%
+                }
+            }
+
+            .bottom{
+                font-size: .7em;
+            }
+        }
+    }
+
+    @media screen and (max-width:720px) {
+        &{
+            .top{
+                flex-wrap: wrap;
+
+                .left{
+                    width: 100%;
+                }
+
+                .right{
+                    width: 100%;
+                    padding: .5em 0 0 0;
+                    text-align: center;
+                    .phone{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:480px) {
+        &{
+            .top{
+                .left{
+                    .list{
+                        width: 45%;
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

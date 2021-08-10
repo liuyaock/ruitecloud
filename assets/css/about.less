@@ -1,0 +1,125 @@
+/* banner */
+.banner {
+    width: 100%;
+    margin-bottom: 3em;
+
+    .back {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/* 公司简介 */
+.profile {
+    margin-bottom: 3em;
+
+    h2 {
+        font-size: 1.7em;
+        text-align: center;
+    }
+
+    span {
+        color: #666666;
+    }
+}
+
+/* 优势 */
+.advantage {
+    margin-bottom: 3em;
+
+    .container {
+        height: 50em;
+        background: url('../images/about_book.png') no-repeat top left;
+        background-size: 100% 100%;
+
+        .item {
+            width: 32%;
+
+            .list1,
+            .list2,
+            .list3 {
+                margin: 3em 0 5em 0;
+
+                h2 {
+                    font-size: 1.5em;
+                    text-align: center;
+                    font-weight: bold;
+                    margin-bottom: 1em;
+                }
+
+                ul {
+                    list-style-type: inherit;
+                    color: #666666;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1000px) {
+        & {
+            .container {
+                .item {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        & {
+            .container {
+                .item {
+                    width: 60%;
+
+                    .list1,
+                    .list2,
+                    .list3 {
+                        margin: 3em 0 3em 0;
+
+                        h2 {
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        & {
+            .container {
+                .item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* contact 联系我们 */
+.contact{
+    margin-bottom: 3em;
+
+    .title{
+        h2{
+            font-size: 1.5em;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+    }
+
+    .phone{
+        margin: 1em;
+    }
+
+    .map{
+        height: 40em;
+
+        #allmap{
+            height: 40em;
+        }
+    }
+}

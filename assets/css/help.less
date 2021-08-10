@@ -1,0 +1,70 @@
+/* banner */
+.banner {
+    width: 100%;
+    margin-bottom: em;
+
+    .back {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/* problem */
+.problem{
+    margin-bottom: 3em;
+
+    .title{
+        font-size: 1.2em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .item{
+        .list{
+            height: 3em;
+            line-height: 3em;
+            border-bottom: 2px solid #cccccc;
+
+            span{
+                &:first-child{
+                    color: #666666;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+
+            .glyphicon-plus{
+                float: right;
+                color: #666666;
+                padding: .8em;
+            }
+        }
+    }
+
+    @media screen and (max-width:480px) {
+        &{
+            .item{
+                .list{
+                    width: auto;
+                    white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+                            
+                    span{
+                        &:first-child{
+                            
+                        }
+                    }
+                    .glyphicon-plus{
+                        float: none;
+                        color: #666666;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
